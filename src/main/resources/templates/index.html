@@ -1,5 +1,6 @@
-<!DOCTYPE html>
-<html lang="fr">
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -239,50 +240,16 @@
                                         <div class="col-md-12">
                                             <div class="mu-tab-content-left">
                                                 <ul class="mu-menu-item-nav">
-                                                    <li>
+                                                    <li th:each="apero : ${apero}">
                                                         <div class="media">
                                                             <div class="media-body">
-                                                                <h4 class="media-heading" style="font-size: 1em">Coupe de Champagne<span class="mu-menu-price"
-                                                                                                                                         style="float: right">11€</span><br>Deutz 12cl</h4>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="media">
-                                                            <div class="media-body">
-                                                                <h4 class="media-heading"style="font-size: 1em">Le Kir Lorrain<span class="mu-menu-price"
-                                                                                                                                    style="float: right">4.50€</span><br>Crème de
-                                                                    Mirabelle, Chardonnay
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="media">
-                                                            <div class="media-body">
-                                                                <h4 class="media-heading" style="font-size: 1em">Le Kir Estival<span
-                                                                        class="mu-menu-price" style="float: right">4.50€</span><br>Crème de
-                                                                    Pamplemousse ou Pêche, Rosé du Var
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="media">
-                                                            <div class="media-body">
-                                                                <h4 class="media-heading" style="font-size: 1em">Cocktail Maison<span
-                                                                        class="mu-menu-price" style="float: right">8.50€</span><br>Purée de
-                                                                    Fraise, Gin arrosé au Champagne
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="media">
-                                                            <div class="media-body">
-                                                                <h4 class="media-heading" style="font-size: 1em">Mojito<span
-                                                                        class="mu-menu-price" style="float: right">8.50€</span><br>Autres
-                                                                    Cocktails
+                                                                <h4 class="media-heading" style="font-size: 1em"><span
+                                                                        th:text="${apero.nom}">NOM</span>
+
+                                                                    <span class="mu-menu-price" th:text="${apero.prix}"
+                                                                          style="float: right">PRIX</span>
+                                                                    <br><span
+                                                                            th:text="${apero.description}">DESCRIPTION</span>
                                                                 </h4>
                                                             </div>
                                                         </div>
@@ -299,108 +266,16 @@
                                         <div class="col-md-12">
                                             <div class="mu-tab-content-left">
                                                 <ul class="mu-menu-item-nav">
-                                                    <li>
+                                                    <li th:each="tapas : ${tapas}">
                                                         <div class="media">
                                                             <div class="media-body">
-                                                                <h4 class="media-heading" style="font-size: 1em">Planche de charcuterie du
-                                                                    moment<span class="mu-menu-price" style="float: right">15€</span><br>Soppressata, Figatellu, Chorizo, Jambon de
-                                                                    Parme
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="media">
-                                                            <div class="media-body">
-                                                                <h4 class="media-heading" style="font-size: 1em">Mozzarella di Buffala<span
-                                                                        class="mu-menu-price" style="float: right">13€</span><br>Ratatouille Froide, Chips de Pain, Pesto
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="media">
-                                                            <div class="media-body">
-                                                                <h4 class="media-heading" style="font-size: 1em">Asperges Vertes<span
-                                                                        class="mu-menu-price" style="float: right">13€</span><br>Yaourt Grec à
-                                                                    la Tapenade, Fondue de Poivron
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="media">
-                                                            <div class="media-body">
-                                                                <h4 class="media-heading" style="font-size: 1em">Saumon Gravlax, en Nage de
-                                                                    Lait de Coco<span class="mu-menu-price" style="float: right">12€</span><br>Mûres Fraiches, Gingembre Confit
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="media">
-                                                            <div class="media-body">
-                                                                <h4 class="media-heading" style="font-size: 1em">Rilletes de Saumon<span
-                                                                        class="mu-menu-price" style="float: right">9.50€</span><br>Roti à l'Estragon
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="media">
-                                                            <div class="media-body">
-                                                                <h4 class="media-heading" style="font-size: 1em">Boudin de C.Parra<span
-                                                                        class="mu-menu-price" style="float: right">13€</span><br>Crème d'Ail, Pipérade, Oignons Rouges Frits
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="media">
-                                                            <div class="media-body">
-                                                                <h4 class="media-heading" style="font-size: 1em">Tartare de de Saumon<span
-                                                                        class="mu-menu-price" style="float: right">13€</span><br>Mangue &
-                                                                    Mayonnaise Citronnée
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="media">
-                                                            <div class="media-body">
-                                                                <h4 class="media-heading" style="font-size: 1em">Ardoise de Saumon<span
-                                                                        class="mu-menu-price" style="float: right">18€</span><br>Rillettes, Gravlax, Tartare
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="media">
-                                                            <div class="media-body">
-                                                                <h4 class="media-heading" style="font-size: 1em">Croque-Monsieur<span
-                                                                        class="mu-menu-price" style="float: right">11€</span><br>Jambon Truffé, Scamorza, Scamorza Fumé
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="media">
-                                                            <div class="media-body">
-                                                                <h4 class="media-heading" style="font-size: 1em">Couteaux Gratinés<span
-                                                                        class="mu-menu-price" style="float: right">14€</span><br>Beurre d'Escargots aux Noisettes
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="media">
-                                                            <div class="media-body">
-                                                                <h4 class="media-heading" style="font-size: 1em">Salade Italienne (à partager
-                                                                    ou plat)<span class="mu-menu-price"
-                                                                                   style="float: right">19€</span>
-                                                                    <br>Courgette, Aubergine, Artichaut & Poivron
-                                                                    Grillés, Jambon de Parme, Parmesan & Mozzarella di
-                                                                    Buffala, Pesto
+                                                                <h4 class="media-heading" style="font-size: 1em"><span
+                                                                        th:text="${tapas.nom}">NOM</span>
+
+                                                                    <span class="mu-menu-price" th:text="${tapas.prix}"
+                                                                          style="float: right">PRIX</span>
+                                                                    <br><span
+                                                                            th:text="${tapas.description}">DESCRIPTION</span>
                                                                 </h4>
                                                             </div>
                                                         </div>
@@ -417,11 +292,16 @@
                                         <div class="col-md-12">
                                             <div class="mu-tab-content-left">
                                                 <ul class="mu-menu-item-nav">
-                                                    <li>
+                                                    <li th:each="pate : ${pates}">
                                                         <div class="media">
                                                             <div class="media-body">
-                                                                <h4 class="media-heading" style="font-size: 1em">Ravioles du Royans<span
-                                                                        class="mu-menu-price" style="float: right">13.50€</span><br>Sauce Suprême, Huile de Truffe & Parmesan
+                                                                <h4 class="media-heading" style="font-size: 1em"><span
+                                                                        th:text="${pate.nom}">NOM</span>
+
+                                                                    <span class="mu-menu-price" th:text="${pate.prix}"
+                                                                          style="float: right">PRIX</span>
+                                                                    <br><span
+                                                                            th:text="${pate.description}">DESCRIPTION</span>
                                                                 </h4>
                                                             </div>
                                                         </div>
@@ -441,55 +321,22 @@
                                                     <li>
                                                         <div class="media">
                                                             <div class="media-body">
-                                                                <h4 class="media-heading" style="font-weight: bold; text-decoration: underline; font-style: italic;"> TERRE</h4>
+                                                                <h4 class="media-heading"
+                                                                    style="font-weight: bold; text-decoration: underline; font-style: italic;">
+                                                                    TERRE</h4>
                                                             </div>
                                                         </div>
                                                     </li>
-                                                    <li>
+                                                    <li th:each="plat : ${platTerre}">
                                                         <div class="media">
                                                             <div class="media-body">
-                                                                <h4 class="media-heading" style="font-size: 1em">Fricassée de Ris de Veau<span
-                                                                        class="mu-menu-price" style="float: right">20€</span><br>En
-                                                                    Persillade & Champignons de Paris
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="media">
-                                                            <div class="media-body">
-                                                                <h4 class="media-heading" style="font-size: 1em">Pluma de Porc Ibérique<span
-                                                                        class="mu-menu-price" style="float: right">22€</span><br>Pipérade au Chorizo, Jus de Viande
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="media">
-                                                            <div class="media-body">
-                                                                <h4 class="media-heading" style="font-size: 1em">Tartare de Boeuf<span
-                                                                        class="mu-menu-price" style="float: right">16€</span><br>Coupé au
-                                                                    Couteau, Pommes de Terre Grenaille
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="media">
-                                                            <div class="media-body">
-                                                                <h4 class="media-heading" style="font-size: 1em">Magret de Canard<span
-                                                                        class="mu-menu-price" style="float: right">19.50€</span><br>Sauce aux
-                                                                    Cerises, Poêlée de Périgourdine
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="media">
-                                                            <div class="media-body">
-                                                                <h4 class="media-heading" style="font-size: 1em">Côte de Boeuf (environ 1.2
-                                                                    Kg)<span class="mu-menu-price" style="float: right">59€</span><br>Pommes de Terre en Persillade, Jus de
-                                                                    Viande
+                                                                <h4 class="media-heading" style="font-size: 1em"><span
+                                                                        th:text="${plat.nom}">NOM</span>
+
+                                                                    <span class="mu-menu-price" th:text="${plat.prix}"
+                                                                          style="float: right">PRIX</span>
+                                                                    <br><span
+                                                                            th:text="${plat.description}">DESCRIPTION</span>
                                                                 </h4>
                                                             </div>
                                                         </div>
@@ -503,58 +350,23 @@
                                                     <li>
                                                         <div class="media">
                                                             <div class="media-body">
-                                                                <h4 class="media-heading" style="font-weight: bold; text-decoration: underline; font-style: italic;">MER
+                                                                <h4 class="media-heading"
+                                                                    style="font-weight: bold; text-decoration: underline; font-style: italic;">
+                                                                    MER
                                                                 </h4>
                                                             </div>
                                                         </div>
                                                     </li>
-                                                    <li>
+                                                    <li th:each="plat : ${platMer}">
                                                         <div class="media">
                                                             <div class="media-body">
-                                                                <h4 class="media-heading" style="font-size: 1em">Dos de Thon Mi-Cuit<span
-                                                                        class="mu-menu-price" style="float: right">19.50€</span><br>
-                                                                    Au Sésame, Sauce Coco, Citronnelle, Purée de Patate Douce
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="media">
-                                                            <div class="media-body">
-                                                                <h4 class="media-heading" style="font-size: 1em">Gambas<span
-                                                                        class="mu-menu-price" style="float: right">17€</span><br>Snackées et Cèleri,
-                                                                    Coco, Curry Vert Maison
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="media">
-                                                            <div class="media-body">
-                                                                <h4 class="media-heading" style="font-size: 1em">Papillote de Saumon et
-                                                                    Chorizo<span
-                                                                            class="mu-menu-price" style="float: right">17€</span><br>Méli-Mélo de Légumes, Citron Confit et
-                                                                    baies Roses
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="media">
-                                                            <div class="media-body">
-                                                                <h4 class="media-heading" style="font-size: 1em">Mix Grill de la Mer<span
-                                                                        class="mu-menu-price" style="float: right">22€</span><br>Risotto
-                                                                    Safrané, Parmesan (Saumon, Couteaux, Gambas)
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="media">
-                                                            <div class="media-body">
-                                                                <h4 class="media-heading" style="font-size: 1em">Tentacules de Poulpe<span
-                                                                        class="mu-menu-price" style="float: right">17€</span><br>Risotto
-                                                                    de Riz Rouge, Chips de Jambon de Parme, Xipister
+                                                                <h4 class="media-heading" style="font-size: 1em"><span
+                                                                        th:text="${plat.nom}">NOM</span>
+
+                                                                    <span class="mu-menu-price" th:text="${plat.prix}"
+                                                                          style="float: right">PRIX</span>
+                                                                    <br><span
+                                                                            th:text="${plat.description}">DESCRIPTION</span>
                                                                 </h4>
                                                             </div>
                                                         </div>
@@ -571,21 +383,16 @@
                                         <div class="col-md-12">
                                             <div class="mu-tab-content-left">
                                                 <ul class="mu-menu-item-nav">
-                                                    <li>
+                                                    <li th:each="plat : ${vegan}">
                                                         <div class="media">
                                                             <div class="media-body">
-                                                                <h4 class="media-heading" style="font-size: 1em">Curry Estival<span
-                                                                        class="mu-menu-price" style="float: right">12€</span><br>Aubergine,
-                                                                    Courgette, Brocoli, Gingembre, Lait de Coco, Curry
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="media">
-                                                            <div class="media-body">
-                                                                <h4 class="media-heading" style="font-size: 1em">Salade Thaï<span
-                                                                        class="mu-menu-price" style="float: right">12€</span><br>Quinoa, Légumes, Vinaigrette au Beurre de Cacahuète & Gingembre
+                                                                <h4 class="media-heading" style="font-size: 1em"><span
+                                                                        th:text="${plat.nom}">NOM</span>
+
+                                                                    <span class="mu-menu-price" th:text="${plat.prix}"
+                                                                          style="float: right">PRIX</span>
+                                                                    <br><span
+                                                                            th:text="${plat.description}">DESCRIPTION</span>
                                                                 </h4>
                                                             </div>
                                                         </div>
@@ -602,12 +409,16 @@
                                         <div class="col-md-12">
                                             <div class="mu-tab-content-left">
                                                 <ul class="mu-menu-item-nav">
-                                                    <li>
+                                                    <li th:each="plat : ${dessert}">
                                                         <div class="media">
                                                             <div class="media-body">
-                                                                <h4 class="media-heading" style="font-size: 1em">Vacherin XL (à partager)<span
-                                                                        class="mu-menu-price"
-                                                                        style="float: right">15€</span>
+                                                                <h4 class="media-heading" style="font-size: 1em"><span
+                                                                        th:text="${plat.nom}">NOM</span>
+
+                                                                    <span class="mu-menu-price" th:text="${plat.prix}"
+                                                                          style="float: right">PRIX</span>
+                                                                    <br><span
+                                                                            th:text="${plat.description}">DESCRIPTION</span>
                                                                 </h4>
                                                             </div>
                                                         </div>
@@ -615,104 +426,22 @@
                                                     <li>
                                                         <div class="media">
                                                             <div class="media-body">
-                                                                <h4 class="media-heading" style="font-size: 1em">Tarte aux Fruits (à
-                                                                    partager)<span class="mu-menu-price" style="float: right">18€</span>
+                                                                <h4 class="media-heading"
+                                                                    style="font-weight: bold; text-decoration: underline; font-style: italic;">
+                                                                    FROMAGES</h4>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li th:each="plat : ${fromage}">
+                                                        <div class="media">
+                                                            <div class="media-body">
+                                                                <h4 class="media-heading" style="font-size: 1em"><span
+                                                                        th:text="${plat.nom}">NOM</span>
+                                                                    <span class="mu-menu-price" th:text="${plat.prix}"
+                                                                          style="float: right">PRIX</span>
+                                                                    <br><span
+                                                                            th:text="${plat.description}">DESCRIPTION</span>
                                                                 </h4>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="media">
-                                                            <div class="media-body">
-                                                                <h4 class="media-heading" style="font-size: 1em">Millefeuille Menthe,
-                                                                    Litchi<span
-                                                                            class="mu-menu-price" style="float: right">7.50€</span>
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="media">
-                                                            <div class="media-body">
-                                                                <h4 class="media-heading" style="font-size: 1em">Baba au Rhum Arrangé
-                                                                    Maison<span
-                                                                            class="mu-menu-price" style="float: right">8.50€</span>
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="media">
-                                                            <div class="media-body">
-                                                                <h4 class="media-heading" style="font-size: 1em">Gaufre, Caramel à la Framboise<span
-                                                                        class="mu-menu-price"
-                                                                        style="float: right">8€</span>
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="media">
-                                                            <div class="media-body">
-                                                                <h4 class="media-heading" style="font-size: 1em">Fondant au Chocolat, Crème
-                                                                    Anglaise<span
-                                                                            class="mu-menu-price" style="float: right">7.50€</span>
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="media">
-                                                            <div class="media-body">
-                                                                <h4 class="media-heading" style="font-size: 1em">Carpaccio d'Ananas, Sirop au
-                                                                    Rhum & Baies Roses, Sorbet Groseille<span
-                                                                            class="mu-menu-price" style="float: right">7.50€</span>
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="media">
-                                                            <div class="media-body">
-                                                                <h4 class="media-heading" style="font-size: 1em">Eclair Citron Meringué<span
-                                                                        class="mu-menu-price"
-                                                                        style="float: right">7.50€</span>
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="media">
-                                                            <div class="media-body">
-                                                                <h4 class="media-heading" style="font-size: 1em">Café ou Thé Gourmand<span
-                                                                        class="mu-menu-price"
-                                                                        style="float: right">7.50€</span>
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="media">
-                                                            <div class="media-body">
-                                                                <h4 class="media-heading" style="font-size: 1em">Café du Patron<span
-                                                                        class="mu-menu-price" style="float: right">7.50€</span><br>Glace
-                                                                    Tiramisu, Amaretto, Café
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="media">
-                                                            <div class="media-body">
-                                                                <h4 class="media-heading" style="font-weight: bold; text-decoration: underline; font-style: italic;">FROMAGES</h4>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="media">
-                                                            <div class="media-body">
-                                                                <h4 class="media-heading" style="font-size: 1em">Planche de Dégustation de
-                                                                    Fromages<span class="mu-menu-price" style="float: right">15€</span><br>Comté, Provolone, Pecorino au Poivre, Chaource</h4>
                                                             </div>
                                                         </div>
                                                     </li>
@@ -731,67 +460,23 @@
                                                     <li>
                                                         <div class="media">
                                                             <div class="media-body">
-                                                                <h4 class="media-heading" style="font-weight: bold; text-decoration: underline; font-style: italic;">Vins
+                                                                <h4 class="media-heading"
+                                                                    style="font-weight: bold; text-decoration: underline; font-style: italic;">
+                                                                    Vins
                                                                     Blanc</h4>
                                                             </div>
                                                         </div>
                                                     </li>
-                                                    <li>
+                                                    <li th:each="plat : ${vinBlanc}">
                                                         <div class="media">
                                                             <div class="media-body">
-                                                                <h4 class="media-heading" style="font-size: 1em">Insolito 2018 (Portugal)<span
-                                                                        class="mu-menu-price"
-                                                                        style="float: right">5€</span>
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="media">
-                                                            <div class="media-body">
-                                                                <h4 class="media-heading" style="font-size: 1em">Sauvignon Santa Rita 2017
-                                                                    (Chili)<span
-                                                                            class="mu-menu-price" style="float: right">5€</span>
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="media">
-                                                            <div class="media-body">
-                                                                <h4 class="media-heading" style="font-size: 1em">Macon Village 2018<span
-                                                                        class="mu-menu-price"
-                                                                        style="float: right">6€</span>
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="media">
-                                                            <div class="media-body">
-                                                                <h4 class="media-heading" style="font-size: 1em">Saint-Véran 2018<span
-                                                                        class="mu-menu-price"
-                                                                        style="float: right">7€</span>
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="media">
-                                                            <div class="media-body">
-                                                                <h4 class="media-heading" style="font-size: 1em">Rully<span
-                                                                        class="mu-menu-price"
-                                                                        style="float: right">8€</span>
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="media">
-                                                            <div class="media-body">
-                                                                <h4 class="media-heading" style="font-size: 1em">Condrieu Gérin 2018<span
-                                                                        class="mu-menu-price"
-                                                                        style="float: right">12€</span>
+                                                                <h4 class="media-heading" style="font-size: 1em"><span
+                                                                        th:text="${plat.nom}">NOM</span>
+
+                                                                    <span class="mu-menu-price" th:text="${plat.prix}"
+                                                                          style="float: right">PRIX</span>
+                                                                    <br><span
+                                                                            th:text="${plat.description}">DESCRIPTION</span>
                                                                 </h4>
                                                             </div>
                                                         </div>
@@ -805,77 +490,23 @@
                                                     <li>
                                                         <div class="media">
                                                             <div class="media-body">
-                                                                <h4 class="media-heading" style="font-weight: bold; text-decoration: underline; font-style: italic;">Vins
+                                                                <h4 class="media-heading"
+                                                                    style="font-weight: bold; text-decoration: underline; font-style: italic;">
+                                                                    Vins
                                                                     Rouges</h4>
                                                             </div>
                                                         </div>
                                                     </li>
-                                                    <li>
+                                                    <li th:each="plat : ${vinRouge}">
                                                         <div class="media">
                                                             <div class="media-body">
-                                                                <h4 class="media-heading" style="font-size: 1em">Syrah 2015 (Californie)<span
-                                                                        class="mu-menu-price"
-                                                                        style="float: right">5€</span>
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="media">
-                                                            <div class="media-body">
-                                                                <h4 class="media-heading" style="font-size: 1em">Bardolino 2018 (Italie)<span
-                                                                        class="mu-menu-price"
-                                                                        style="float: right">5.50€</span>
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="media">
-                                                            <div class="media-body">
-                                                                <h4 class="media-heading" style="font-size: 1em">Fleurie 2018<span
-                                                                        class="mu-menu-price"
-                                                                        style="float: right">6€</span>
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="media">
-                                                            <div class="media-body">
-                                                                <h4 class="media-heading" style="font-size: 1em">Hautes Côtes de Nuits
-                                                                    2017<span
-                                                                            class="mu-menu-price" style="float: right">7€</span>
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="media">
-                                                            <div class="media-body">
-                                                                <h4 class="media-heading" style="font-size: 1em">Montagne Saint-Emilion
-                                                                    2015<span
-                                                                            class="mu-menu-price" style="float: right">7€</span>
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="media">
-                                                            <div class="media-body">
-                                                                <h4 class="media-heading" style="font-size: 1em">Saint Chinian 2015<span
-                                                                        class="mu-menu-price"
-                                                                        style="float: right">8€</span>
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="media">
-                                                            <div class="media-body">
-                                                                <h4 class="media-heading" style="font-size: 1em">Côte Rôtie Gérin 2017<span
-                                                                        class="mu-menu-price"
-                                                                        style="float: right">14€</span>
+                                                                <h4 class="media-heading" style="font-size: 1em"><span
+                                                                        th:text="${plat.nom}">NOM</span>
+
+                                                                    <span class="mu-menu-price" th:text="${plat.prix}"
+                                                                          style="float: right">PRIX</span>
+                                                                    <br><span
+                                                                            th:text="${plat.description}">DESCRIPTION</span>
                                                                 </h4>
                                                             </div>
                                                         </div>
@@ -889,27 +520,23 @@
                                                     <li>
                                                         <div class="media">
                                                             <div class="media-body">
-                                                                <h4 class="media-heading" style="font-weight: bold; text-decoration: underline; font-style: italic;">Vins
+                                                                <h4 class="media-heading"
+                                                                    style="font-weight: bold; text-decoration: underline; font-style: italic;">
+                                                                    Vins
                                                                     Rosés</h4>
                                                             </div>
                                                         </div>
                                                     </li>
-                                                    <li>
+                                                    <li th:each="plat : ${vinRose}">
                                                         <div class="media">
                                                             <div class="media-body">
-                                                                <h4 class="media-heading" style="font-size: 1em">Côtes de Provence Bio
-                                                                    2019<span
-                                                                            class="mu-menu-price" style="float: right">6€</span>
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="media">
-                                                            <div class="media-body">
-                                                                <h4 class="media-heading" style="font-size: 1em">En Piscine 15cl<span
-                                                                        class="mu-menu-price"
-                                                                        style="float: right">7.50€</span>
+                                                                <h4 class="media-heading" style="font-size: 1em"><span
+                                                                        th:text="${plat.nom}">NOM</span>
+
+                                                                    <span class="mu-menu-price" th:text="${plat.prix}"
+                                                                          style="float: right">PRIX</span>
+                                                                    <br><span
+                                                                            th:text="${plat.description}">DESCRIPTION</span>
                                                                 </h4>
                                                             </div>
                                                         </div>
