@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "test-fire-base"
+    "default": "test-fire-base",
+    "firetest": "lepotager-216c0"
   }
 }
