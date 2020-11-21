@@ -21,7 +21,7 @@ public class IndexController {
     @Autowired
     private FireDataBaseService fireDataBaseService;
 
-    private static final String TEMPLATE_INDEX = "/index";
+    private static final String TEMPLATE_INDEX = "index";
 
     @GetMapping({"/", TEMPLATE_INDEX})
     public ModelAndView displayIndex(Map<String, Object> model) throws FirebaseException, IOException, JacksonUtilityException {
